@@ -1,0 +1,1 @@
+Agenda of this project is to setup a react project.

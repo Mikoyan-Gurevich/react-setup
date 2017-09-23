@@ -1,0 +1,11 @@
+{
+  "name": "react-setup",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "webpack": "^3.6.0"
+  },
+  "scripts": {
+    "start": "webpack --config webpack.config.js"
+  }
+}

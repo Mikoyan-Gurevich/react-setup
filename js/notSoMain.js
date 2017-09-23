@@ -1,0 +1,1 @@
+console.log('This logging means that notSoMain.js file has been included');
