@@ -1,11 +1,23 @@
 {
   "name": "react-setup",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
   "devDependencies": {
-    "webpack": "^3.6.0"
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.15.4",
+    "html-webpack-plugin": "^2.30.1",
+    "webpack": "^3.6.0",
+    "webpack-dev-middleware": "^1.12.0",
+    "webpack-hot-middleware": "^2.19.1"
   },
   "scripts": {
-    "start": "webpack --config webpack.config.js"
+    "build": "webpack --config webpack.config.js",
+    "start": "node web-server.js"
   }
 }
