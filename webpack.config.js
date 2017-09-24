@@ -1,6 +1,7 @@
 var webpack = require('webpack'),
     path = require('path'),
-    HtmlWebpackPlugin = require('html-webpack-plugin');
+    HtmlWebpackPlugin = require('html-webpack-plugin')
+    CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -28,6 +29,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new CleanWebpackPlugin(['build']),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
@@ -38,6 +40,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html', // The path specified here gets appended to the path provided in output section above
+            path: path.resolve(__dirname, 'build'),
             title: 'React Set',
             template: 'index.ejs'
         }),

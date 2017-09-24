@@ -11,7 +11,7 @@ app.use(webpackDevMiddleware(compiler, {
     publicPath: '/build/'
 }));
 app.use(webpackHotMiddleware(compiler, {
-    path: '/__webpack_hmr'
+    path: '/build/__webpack_hmr'
 }));
 app.set('port', 3000);
 app.use(express.static(path.join(__dirname, 'build')));

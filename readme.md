@@ -12,4 +12,4 @@ Setting up this project :
 
 4. npm run build _In future this step will be removed. This is currently in place only to cover up an issue._
 
-5. npm run start _This will start a web server on localhost:3000_
+5. npm run start _This will start a web server on localhost:3000/build/_

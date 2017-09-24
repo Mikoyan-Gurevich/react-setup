@@ -10,6 +10,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
     "express": "^4.15.4",
     "html-webpack-plugin": "^2.30.1",
     "webpack": "^3.6.0",
