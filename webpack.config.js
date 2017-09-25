@@ -25,6 +25,15 @@ module.exports = {
                 test: /\.js$/,
                 use: 'babel-loader',
                 exclude: path.join(__dirname, '/node_modules/')
+            },
+            {
+                test: /\.scss$/,
+                use: ['style-loader', 'css-loader', 'sass-loader'],
+                exclude: path.join(__dirname, '/node_modules/')
+            },
+            {
+                test: /\.(png|svg|jpg|gif)$/,
+                use: ['file-loader']
             }
         ]
     },

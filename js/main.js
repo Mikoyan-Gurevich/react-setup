@@ -1,12 +1,6 @@
-import './notSoMain';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './main.scss';
+import Background from './Components/Background/background';
 
-console.log('This logging means that main.js file has been included');
-
-
-const reactElement = (
-    <div>This is the first div that will be displayed on the screen.</div>
-);
-
-ReactDOM.render(reactElement, document.getElementById('app'));
+ReactDOM.render(<Background />, document.getElementById('app'));
