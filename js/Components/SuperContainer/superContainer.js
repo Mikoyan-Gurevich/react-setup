@@ -53,7 +53,7 @@ class SuperContainer extends React.Component {
                         <div className='contacts'>
                             {contactsMockData.map((contact, key) => {
                                 return (
-                                    <Link key={key} to={`/build/${contact.id}`}>
+                                    <Link key={key} to={`/${contact.id}`}>
                                         {this.getContactCard(contact)}
                                     </Link>
                                 )
@@ -63,7 +63,7 @@ class SuperContainer extends React.Component {
                 </div>
                 <div className='rightPart'>
                     <div className='header'>Watch out this space for header</div>
-                    <Route path='/build/:contactId' render={((match) =>
+                    <Route path='/:contactId' render={((match) =>
                         <div>{JSON.stringify(contactsMockData[match.match.params.contactId - 1])}</div>)}/>
                 </div>
             </div>

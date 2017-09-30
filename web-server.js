@@ -8,10 +8,10 @@ var webpackHotMiddleware = require('webpack-hot-middleware');
 const compiler = webpack(require('./webpack.config'));
 
 app.use(webpackDevMiddleware(compiler, {
-    publicPath: '/build/'
+    publicPath: '/'
 }));
 app.use(webpackHotMiddleware(compiler, {
-    path: '/build/__webpack_hmr'
+    path: '/__webpack_hmr'
 }));
 app.set('port', 3000);
 app.use(express.static(path.join(__dirname, 'build')));
