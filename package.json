@@ -31,5 +31,8 @@
     "build": "webpack --config webpack.config.js",
     "start": "node web-server.js",
     "lint": "./node_modules/.bin/eslint --fix ./js"
-  }
+  },
+  "repository": "https://github.com/Heli-Copter/react-setup.git",
+  "author": "<gaurav.min.js@gmail.com>",
+  "license": "MIT"
 }
