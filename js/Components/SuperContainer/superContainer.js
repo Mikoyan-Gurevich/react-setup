@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link, Route} from 'react-router-dom';
-import './superContainer.scss'
+import './superContainer.scss';
 import avatar from '../../../avatar.png';
 
 const contactsMockData = [
@@ -8,13 +8,13 @@ const contactsMockData = [
         id: 1,
         name: 'Gaurav Sharma',
         time: '14:30',
-        message: 'Hi !'
+        message: 'Hi !',
     },
     {
         id: 2,
         name: 'Saurabh Sharma',
         time: '13:30',
-        message: 'Hey !'
+        message: 'Hey !',
     }
 ];
 
@@ -45,9 +45,13 @@ class SuperContainer extends React.Component {
         return (
             <div className='superContainer'>
                 <div className='leftPart'>
-                    <div className='header'>Watch out this space for header</div>
+                    <div className='header'>
+                        Watch out this space for header
+                    </div>
                     <div className='searchWrapper'>
-                        <div className='searchBox'>Watch out this space for search box</div>
+                        <div className='searchBox'>
+                            Watch out this space for search box
+                        </div>
                     </div>
                     <div className='contactsWrapper'>
                         <div className='contacts'>
@@ -56,15 +60,20 @@ class SuperContainer extends React.Component {
                                     <Link key={key} to={`/${contact.id}`}>
                                         {this.getContactCard(contact)}
                                     </Link>
-                                )
+                                );
                             })}
                         </div>
                     </div>
                 </div>
                 <div className='rightPart'>
-                    <div className='header'>Watch out this space for header</div>
+                    <div className='header'>
+                        Watch out this space for header
+                    </div>
                     <Route path='/:contactId' render={((match) =>
-                        <div>{JSON.stringify(contactsMockData[match.match.params.contactId - 1])}</div>)}/>
+                        <div>
+                            {JSON.stringify(contactsMockData[match.match.params.contactId - 1])}
+                            </div>
+                    )}/>
                 </div>
             </div>
         );
