@@ -7,13 +7,20 @@ var webpackHotMiddleware = require('webpack-hot-middleware');
 
 const compiler = webpack(require('./webpack.config'));
 
+var routes = require('./routes');
+
 app.use(webpackDevMiddleware(compiler, {
     publicPath: '/'
 }));
 app.use(webpackHotMiddleware(compiler, {
     path: '/__webpack_hmr'
 }));
+
 app.set('port', 3000);
+
+// Add routes
+routes(app);
+
 app.use(express.static(path.join(__dirname, 'build')));
 var server = app.listen(app.get('port'), function() {
     var port = server.address().port;
